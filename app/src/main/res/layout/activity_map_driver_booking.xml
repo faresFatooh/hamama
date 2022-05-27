@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="activities.driver.MapDriverBookingActivity">
+
+
+  <Button
+      android:id="@+id/btnStartBooking"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text= "INICIAR VIAJE"
+      android:background= "@drawable/rounded_button"
+      android:backgroundTint= "@color/colorPrimaryDark"
+      android:textColor= "@color/colorWhite"
+      android:layout_margin="30dp"/>
+
+  <Button
+      android:id="@+id/btnFinishBooking"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text= "FINALIZAR VIAJE"
+      android:background= "@drawable/rounded_button"
+      android:backgroundTint= "@color/colorPrimaryDark"
+      android:textColor= "@color/colorWhite"
+      android:visibility="gone"
+      android:layout_margin="30dp"/>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+    >
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+        <ImageView
+            android:id="@+id/imageViewClientBooking"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+          android:src="@drawable/icons8_usuario_96"/>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewOriginClientBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lugar de recogida"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewDestinationClientBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destino"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+
+            <TextView
+                android:id="@+id/textViewClientBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del usuario"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewEmailClientBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email del usuario"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+          </LinearLayout>
+
+
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+  </LinearLayout>
+
+
+
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>

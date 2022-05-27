@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.p1.uber" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_uber"
+        android:label="Uber"
+        android:roundIcon="@mipmap/ic_uber_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning" >
+        <activity android:name="com.p1.uber.activities.client.UpdateProfileActivity"
+            android:parentActivityName="com.p1.uber.activities.client.MapClientActivity">
+        </activity>
+        <activity android:name="com.p1.uber.activities.driver.NotificationBookingActivity" >
+        </activity>
+        <activity android:name="com.p1.uber.activities.client.CalificationDriverActivity" >
+        </activity>
+        <activity android:name="com.p1.uber.activities.driver.CalificationClientActivity" >
+        </activity>
+        <activity android:name="com.p1.uber.activities.driver.MapDriverBookingActivity" >
+        </activity>
+        <activity android:name="com.p1.uber.activities.client.MapClientBookingActivity" >
+        </activity>
+
+        <receiver
+            android:name="com.p1.uber.receivers.AcceptReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name="com.p1.uber.receivers.CancelReceiver"
+            android:enabled="true" />
+
+        <service android:name="com.p1.uber.services.MyFirebaseMessagingClient" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.p1.uber.activities.client.RequestDriverActivity" />
+        <activity
+            android:name="com.p1.uber.activities.client.DetailRequestActivity"
+            android:parentActivityName="com.p1.uber.activities.client.MapClientActivity" />
+        <activity android:name="com.p1.uber.activities.driver.MapDriverActivity" />
+        <activity android:name="com.p1.uber.activities.client.MapClientActivity" />
+        <activity android:name="com.p1.uber.activities.driver.RegisterDriverActivity" />
+        <activity
+            android:name="com.p1.uber.activities.LoginActivity"
+            android:parentActivityName="com.p1.uber.activities.SelectOptionAuthActivity" />
+        <activity
+            android:name="com.p1.uber.activities.client.RegisterMainActivity"
+            android:parentActivityName="com.p1.uber.activities.SelectOptionAuthActivity" />
+        <activity
+            android:name="com.p1.uber.activities.SelectOptionAuthActivity"
+            android:parentActivityName="com.p1.uber.activities.MainActivity" />
+        <activity android:name="com.p1.uber.activities.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>
