@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item
+        android:id="@+id/call"
+        android:title="@string/history"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        />
+    <item
+        android:id="@+id/setting"
+        android:title="@string/setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        />
+
+    <item
+        android:id="@+id/online"
+        android:title="@string/online"
+        android:icon="@drawable/ic_baseline_settings_24"
+        />
+<!--    <item-->
+<!--        android:id="@+id/logout1"-->
+<!--        tools:ignore="DuplicateIds"-->
+<!--        android:checkable="false"-->
+<!--        android:title="" />-->
+<!--    <item-->
+<!--        android:id="@+id/logout2"-->
+<!--        tools:ignore="DuplicateIds"-->
+<!--        android:checkable="false"-->
+<!--        android:title="" />-->
+<!--    <item-->
+<!--        android:id="@+id/logout3"-->
+<!--        tools:ignore="DuplicateIds"-->
+<!--        android:checkable="false"-->
+<!--        android:title="" />-->
+    <item
+        android:id="@+id/pay"
+        android:title="@string/payment_history"
+        android:icon="@drawable/ic_baseline_logout_24"
+        />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/cerrar_sesion"
+        android:icon="@drawable/ic_baseline_logout_24"
+        />
+
+</menu>

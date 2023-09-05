@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
     tools:context="activities.driver.MapDriverActivity">
-
-   <include layout="@layout/action_bar_toolbar"></include>
-   <fragment
-       android:id="@+id/map"
+   <androidx.coordinatorlayout.widget.CoordinatorLayout
        android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <fragment
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:name="com.google.android.gms.maps.SupportMapFragment"
+
+          />
+      <ImageButton
+          android:id="@+id/imageButton2"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_margin="5dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/menu"
+          android:backgroundTint="#00DB0B1B"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+
+      <Button
+          android:id="@+id/btnConnect"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_gravity="bottom|center_horizontal"
+          android:layout_margin="30dp"
+          android:background="@drawable/glow_animation"
+          android:text="@string/connect"
+          android:textColor="@color/colorWhite"
+          android:textSize="10sp" />
+
+   </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/navView"
+       android:layout_width="wrap_content"
        android:layout_height="match_parent"
-       android:name="com.google.android.gms.maps.SupportMapFragment"
-
-       />
-
-
-
-   <Button
-       android:id="@+id/btnConnect"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-      android:text="CONECTARSE"
-       android:layout_gravity="bottom"
-       android:layout_margin="30dp"
-       android:textColor="@color/colorWhite"
-       android:background="@drawable/rounded_button"
-       android:backgroundTint="@color/colorPrimaryDark"
-       />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+       app:menu="@menu/menuu"
+       app:headerLayout="@layout/nav_header"
+       android:layout_gravity="start"
+       android:fitsSystemWindows="true"/>
+</androidx.drawerlayout.widget.DrawerLayout>

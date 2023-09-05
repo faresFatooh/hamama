@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#00E0F2F1"
+    android:outlineAmbientShadowColor="#00E0F2F1"
+    android:outlineSpotShadowColor="#00E0F2F1">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        app:theme="@style/AppTheme"
-        />
 
+        />
 
 
 </com.google.android.material.appbar.AppBarLayout>

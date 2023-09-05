@@ -1,0 +1,45 @@
+<!-- assets/payment_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Form</title>
+</head>
+<body>
+<form id="form">
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" required />
+    </div>
+    <div class="form-submit">
+        <button type="submit">Pay</button>
+    </div>
+</form>
+
+<script>
+        const paymentForm = document.getElementById('form');
+        paymentForm.addEventListener("submit", pay, false);
+
+        function pay(e) {
+            e.preventDefault();
+            const lahza = new LahzaPopup();
+            lahza.newTransaction({
+                key: 'pk_test_RRAyTN6jDNbBDiwgdmBKgI4SzX0HqCK2w',
+                email: document.getElementById("email").value,
+                currency: "ILS",
+                amount: document.getElementById("amount").value * 100,
+                onSuccess: (transaction) => {
+                    let message = 'Payment complete! Reference: ' + transaction.reference;
+                    alert(message);
+                },
+                onCancel: () => {
+                    alert('Window closed.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

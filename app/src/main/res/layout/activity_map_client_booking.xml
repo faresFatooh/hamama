@@ -19,11 +19,11 @@
         android:id="@+id/textViewStatusBooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estado"/>
+        android:text="@string/estado"/>
 
 
   </androidx.cardview.widget.CardView>
-cal
+
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -47,12 +47,44 @@ cal
           android:layout_height="wrap_content"
           android:orientation="horizontal"
           >
-        <ImageView
-            android:id="@+id/imageViewDriverBooking"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/icons8_usuario_96"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+          <ImageView
+              android:id="@+id/imageViewDriverBooking"
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_marginTop="16dp"
+              android:src="@drawable/user_male" />
+          <Button
+              android:id="@+id/btn_chat_Driver"
+              android:layout_width="wrap_content"
+              android:layout_height="38dp"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="15dp"
+              android:backgroundTint="@color/colorAccent"
+              android:text="Chat"
+              android:gravity="center"
+              android:drawableStart="@drawable/baseline_chat_24"
+              android:drawablePadding="3dp"
+              android:padding="10dp"
+              android:fontFamily="@font/poppins_regular"
+              android:textAllCaps="false"
+              android:textSize="10sp"
+              android:textColor="@color/quantum_white_100"
+              />
 
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/quantum_black_100"
+            android:layout_margin="5dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +94,7 @@ cal
               android:id="@+id/textViewOriginDriverBooking"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Lugar de recogida"
+              android:text="@string/lugar_de_recogida"
               android:layout_marginLeft="5dp"
               android:layout_marginTop="10dp"
 
@@ -72,7 +104,7 @@ cal
               android:id="@+id/textViewDestinationDriverBooking"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Destino"
+              android:text="@string/destino"
               android:layout_marginLeft="5dp"
               android:layout_marginTop="10dp"
               android:textSize="16dp"/>
@@ -82,19 +114,45 @@ cal
               android:id="@+id/textViewDriverBooking"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Nombre del conductor"
+              android:text="@string/nombre_del_conductor"
               android:layout_marginLeft="5dp"
               android:layout_marginTop="10dp"
               android:textSize="16dp"/>
 
-          <TextView
-              android:id="@+id/textViewEmailDriverBooking"
-              android:layout_width="wrap_content"
+
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="Email del conductor"
-              android:layout_marginLeft="5dp"
-              android:layout_marginTop="10dp"
-              android:textSize="16dp"/>
+              android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewEmailDriverBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_del_conductor"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/btn_call"
+                android:background="@drawable/buttonshape"
+                android:text="Call"
+                android:layout_margin="5dp"
+                android:drawableEnd="@android:drawable/stat_sys_phone_call"
+                android:drawablePadding="3dp"
+                android:padding="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/quantum_white_100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </LinearLayout>
 

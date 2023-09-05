@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="BUSCANDO CONDUCTOR..."
+            android:text="@string/buscando_conductor"
             android:textSize="18dp"
             />
         <LinearLayout
@@ -44,7 +44,7 @@
             android:id="@+id/btnCancelRequest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CANCELAR VIAJE"
+            android:text="@string/cancelar_viaje"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorPrimaryDark"
             android:textColor="@color/colorWhite"

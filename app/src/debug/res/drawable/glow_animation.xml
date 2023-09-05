@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- تعريف الشكل الأساسي للعنصر -->
+    <item>
+        <shape android:shape="rectangle" android:padding="10dp">
+            <corners android:radius="100dp"></corners>
+            <solid android:color="@color/colorAccent" />
+            <stroke android:width="2dp" android:color="@color/colorWhite" />
+        </shape>
+    </item>
+
+    <!-- تعريف التأثير المتحرك -->
+    <item android:drawable="@drawable/rounded_button"
+        android:stateListAnimator="@animator/glow_animator" /> <!-- تعيين تأثير الرسم المتحرك هنا -->
+
+</layer-list>

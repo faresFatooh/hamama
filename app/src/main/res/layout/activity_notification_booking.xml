@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -27,7 +25,7 @@
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Desde"
+          android:text="@string/desde"
           android:textAlignment="center"
           android:textSize= "22sp"
           android:textColor= "@android:color/black"
@@ -38,7 +36,7 @@
           android:id="@+id/textViewOrigin"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Cr falsa avenida falsa"
+          android:text="@string/false_cr_false_avenue"
           android:textAlignment="center"
           android:textSize= "17sp"
           android:layout_marginTop="5dp"
@@ -47,7 +45,7 @@
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Hasta"
+          android:text="@string/hasta"
           android:textAlignment="center"
           android:textSize= "22sp"
           android:textColor= "@android:color/black"
@@ -58,7 +56,7 @@
           android:id="@+id/textViewDestination"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Cr falsa avenida falsa"
+          android:text="@string/false_cr_false_avenue"
           android:textAlignment="center"
           android:textSize= "17sp"
           android:layout_marginTop="5dp"
@@ -84,7 +82,7 @@
               android:layout_height="wrap_content"
               android:layout_gravity="center"
               android:layout_weight="1"
-              android:text="Tiempo de llegada"
+              android:text="@string/tiempo_de_llegada"
               android:textColor="@android:color/black"
               android:textSize="18sp" />
 
@@ -108,7 +106,7 @@
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text= "    Distancia "
+              android:text= "@string/distancia"
               android:textColor="@android:color/black"
               android:layout_gravity = "center"
               android:textSize="18sp"/>
@@ -117,7 +115,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_gravity = "center"
-              android:text= "0 km"/>
+              android:text= "@string/_0_km"/>
 
 
 
@@ -130,11 +128,10 @@
           android:id="@+id/textViewCounter"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="10"
-          android:textAlignment="center"
-          android:textSize= "40sp"
           android:layout_marginTop="25dp"
-          />
+          android:text="100"
+          android:textAlignment="center"
+          android:textSize="40sp" />
 
 
     </LinearLayout>
@@ -153,7 +150,7 @@
           android:id="@+id/btnAcceptBooking"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="ACEPTAR"
+          android:text="@string/aceptar"
           android:layout_weight="1"
           android:background="@drawable/rounded_button"
           android:backgroundTint="@color/colorPrimaryDark"
@@ -164,7 +161,7 @@
         android:id="@+id/btnCancelBooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RECHAZAR"
+        android:text="@string/rechazar"
         android:layout_weight="1"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/colorPrimaryDark"
